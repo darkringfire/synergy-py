@@ -4,11 +4,13 @@ def factorial(n):
         result *= i
     return result
 
+
 def factorial_list(f):
     result = []
     for i in range(f, 0, -1):
         result.append(factorial(i))
     return result
+
 
 n = int(input('Введите число: '))
 f = factorial(n)
