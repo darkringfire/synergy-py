@@ -1,5 +1,5 @@
+import re
+
 string = input("Enter a string: ")
-
-new_string = " ".join(string.split())
-
-print(new_string)
+new_string = re.sub(" +", " ", string)
+print(f'"{new_string}"')
