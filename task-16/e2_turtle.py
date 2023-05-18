@@ -28,7 +28,12 @@ class Turtle:
     def count_moves(self, x2, y2):
         dx = abs(x2 - self.x)
         dy = abs(y2 - self.y)
-        return (dx + self.s - 1) // self.s + (dy + self.s - 1) // self.s
+        if dx % self.s + dy % self.s == 0:
+            return dx // self.s + dy // self.s
+        print(
+            f"Точка ({x2}, {y2}) недостижима из точки ({self.x}, {self.y}) с шагом {self.s}"
+        )
+        return None
 
 
 turtle = Turtle(0, 0, 1)

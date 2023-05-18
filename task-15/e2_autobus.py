@@ -17,5 +17,4 @@ class Autobus(Transport):
 
 
 bus = Autobus("Renaul Logan", 180, 12)
-print(bus)
 print(bus.seating_capacity())
